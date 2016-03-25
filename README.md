@@ -9,10 +9,9 @@ criterion = nn.TripletEmbeddingCriterion([alpha])
 The cost function can be expressed as follow
 
 ![                 1  __                       2                            2 
-```lua 
 L({a, p, n})  =  - \     max(0, ||a   -  p ||   +  alpha  -  ||a   -  n || )
                  N /__ i           i      i                     i      i    
-```](https://latex.codecogs.com/svg.latex?L%28%7Ba%2C%20p%2Cn%7D%29%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_i%20%5Cmax%280%2C%20%7C%7Ca_i%20-%20p_i%7C%7C%5E2%20&plus;%20%5Calpha%20-%20%7C%7Ca_i%20-%20n_i%7C%7C%5E2%29)
+](https://latex.codecogs.com/svg.latex?L%28%7Ba%2C%20p%2Cn%7D%29%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_i%20%5Cmax%280%2C%20%7C%7Ca_i%20-%20p_i%7C%7C%5E2%20&plus;%20%5Calpha%20-%20%7C%7Ca_i%20-%20n_i%7C%7C%5E2%29)
 
 
 where `a`, `p` and `n` are batches of the embedding of *ancore*, *positive* and *negative* samples respectively.
